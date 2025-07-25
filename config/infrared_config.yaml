@@ -1,0 +1,31 @@
+# 红外相机边缘检测系统配置文件
+
+camera:
+  device_id: 0
+  width: 640
+  height: 480
+  fps: 30
+  format: "Y16"
+  buffer_size: 4
+
+processing:
+  gaussian_kernel: [5, 5]
+  clahe_clip_limit: 2.0
+  clahe_tile_size: [8, 8]
+  temporal_filter_size: 3
+
+edge_detection:
+  algorithm: "canny"
+  canny_low_threshold: 200
+  canny_high_threshold: 300
+  sobel_kernel: 7
+  temperature_threshold: 5.0
+  hough_threshold: 100
+  hough_min_line_length: 200
+  hough_max_line_gap: 20
+
+system:
+  log_level: "INFO"
+  max_memory_mb: 512
+  enable_gpu: false
+  output_dir: "./output"
