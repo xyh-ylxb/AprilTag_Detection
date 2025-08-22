@@ -53,7 +53,7 @@ def main():
                         help='目标尺寸（像素）')
     parser.add_argument('--start', type=int, default=0, 
                         help='起始ID')
-    parser.add_argument('--end', type=int, default=10, 
+    parser.add_argument('--end', type=int, default=43, 
                         help='结束ID')
     
     args = parser.parse_args()

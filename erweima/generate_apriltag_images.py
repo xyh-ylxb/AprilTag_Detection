@@ -29,7 +29,7 @@ def main():
     parser = argparse.ArgumentParser(description="批量生成Apriltag图片")
     parser.add_argument('--family', type=str, default='tag36h11', help='Apriltag系列（如tag36h11）')
     parser.add_argument('--start', type=int, default=0, help='起始ID')
-    parser.add_argument('--end', type=int, default=9, help='结束ID（包含）')
+    parser.add_argument('--end', type=int, default=42, help='结束ID（包含）')
     parser.add_argument('--size', type=int, default=300, help='图片尺寸（像素）')
     parser.add_argument('--outdir', type=str, default='apriltag_imgs', help='输出文件夹')
     args = parser.parse_args()
